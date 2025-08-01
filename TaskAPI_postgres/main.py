@@ -1,8 +1,8 @@
 from fastapi import FastAPI ,Depends,HTTPException, status
 from sqlalchemy.orm import  Session
-from db.database import SessionLocal,engine ,Base
-from utilites.models import User,Task
-from utilites.auth import create_access_token,hash_password,decode_access_token,verify_password
+from TaskAPI_postgres.database import SessionLocal,engine ,Base
+from TaskAPI_postgres.models import User,Task
+from TaskAPI_postgres.auth import create_access_token,hash_password,decode_access_token,verify_password
 from pydantic import BaseModel
 from fastapi.security import HTTPBearer,HTTPAuthorizationCredentials
 from typing import Optional,List
